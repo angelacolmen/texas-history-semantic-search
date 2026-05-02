@@ -53,10 +53,6 @@ Users who wish to reproduce, publish, or reuse the underlying digital objects (i
 
 This project does not claim ownership of any underlying digital objects and does not reproduce them. All links point back to the original records at the Portal to Texas History.
 
-## About
- 
-Built by Angela Colmenares, AI Librarian. This project sits at the intersection of information science and applied machine learning, exploring how modern embedding models can expand access to cultural heritage collections.
-
 \---
 
 *Data sourced from the* [*Portal to Texas History*](https://texashistory.unt.edu/)*, maintained by the University of North Texas Libraries. Dataset licensed CC0.*
