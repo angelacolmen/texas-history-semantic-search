@@ -1,90 +1,44 @@
 # Texas History Semantic Search
 
-An end-to-end AI/ML project for library digital collections — from raw metadata harvesting to a live semantic search application.
+An AI-powered semantic search application for exploring historical records from the [Portal to Texas History](https://texashistory.unt.edu/). Built to demonstrate how embedding models can enhance discovery in digital special collections.
 
-Built as an AI/ML project demonstrating the intersection of library science and machine learning, with a focus on Texas historical collections.
+## Overview
 
-🔗 [**Try the live app on Hugging Face**](https://huggingface.co/spaces/AngelaColmen/texas-history-semantic-search)  
-📦 [**View the dataset on Hugging Face**](https://huggingface.co/datasets/AngelaColmen/texas-history-collection)
+This application enables meaning-based search across 500+ digitized historical records, moving beyond keyword matching to surface conceptually relevant results. A user searching for *"early settler communities along the Rio Grande"* will retrieve records that are thematically related — even when the exact words do not appear in the metadata.
 
-\---
+Developed as part of an exploration into AI applications for library and archival discovery systems.
 
-## What It Does
+## Features
 
-This app lets users search 500+ Texas historical records by **meaning**, not just keywords. A user can type something like *"early farming communities along the Rio Grande"* and get relevant results even if those exact words don't appear in any record.
+- Semantic search powered by the [GTE-Large](https://huggingface.co/thenlper/gte-large) embedding model
+- Dataset harvested from the Portal to Texas History via OAI-PMH
+- TAMU-branded interface built with Gradio
+- Results include metadata, subject tags, match scores, and direct links to archival records
 
-Each result shows the title, date, format, subject headings, a description excerpt, and a direct link to the full record on the Portal to Texas History.
+## Embedding Model
 
-\---
+This project uses **GTE-Large** (General Text Embeddings, Large) by Alibaba DAMO Academy. GTE-Large was selected over general-purpose sentence embedding models for its stronger performance on dense, descriptive academic and archival text. It is fully open source under the MIT license.
 
-## Project Pipeline
+| Model | Size | Best For |
+|---|---|---|
+| all-MiniLM-L6-v2 (previous) | 90MB | General purpose |
+| GTE-Large (current) | 670MB | Academic and historical text |
 
-```
-Portal to Texas History (OAI-PMH)
-        ↓
-harvest\_texas\_history.py       — harvests \& cleans 500 metadata records
-        ↓
-texas\_history\_collection.csv   — structured dataset published on Hugging Face
-        ↓
-app.py                         — Gradio semantic search app built on the dataset
-        ↓
-Live Space on Hugging Face
-```
+## Tech Stack
 
-\---
+- `sentence-transformers` — embedding and semantic search
+- `gradio` — user interface
+- `pandas` — data handling
+- `torch` — model inference
+- Dataset hosted on [Hugging Face Datasets](https://huggingface.co/datasets/AngelaColmen/texas-history-collection)
 
-## Files
+## Live Demo
 
-|File|Description|
-|-|-|
-|`harvest\_texas\_history.py`|Harvests metadata from the Portal to Texas History via OAI-PMH and saves a clean CSV|
-|`fix\_portal\_urls.py`|Utility script that builds direct Portal URLs from OAI identifier fields|
-|`texas\_history\_collection.csv`|The curated dataset of 500 records|
-|`dataset\_README.md`|Hugging Face dataset card with full documentation of schema, provenance, and intended uses|
-|`app.py`|Gradio application for semantic search over the dataset|
+Try the app on [Hugging Face Spaces](https://huggingface.co/AngelaColmen).
 
-\---
+## About
 
-## Technologies Used
-
-* **OAI-PMH** — Open Archives Initiative Protocol for Metadata Harvesting
-* **Dublin Core** — metadata standard used by the Portal to Texas History
-* **sentence-transformers** — `all-MiniLM-L6-v2` model for semantic embeddings
-* **Gradio** — web interface framework for the search app
-* **Hugging Face** — dataset hosting and app deployment
-* **pandas** — data cleaning and manipulation
-
-\---
-
-## Library Science Context
-
-This project applies core library science concepts to AI/ML workflows:
-
-* **Metadata standards** — Dublin Core fields (title, description, subject, creator, date, type) structure the dataset
-* **Controlled vocabulary** — subject headings from the Portal to Texas History are preserved and displayed as searchable tags
-* **Provenance documentation** — the dataset card documents where the data came from, how it was collected, and its limitations
-* **Rights management** — CC0 license applied; original object rights respected by linking back to the source
-* **OAI-PMH** — standard protocol used by libraries, archives, and repositories for metadata interchange
-
-\---
-
-## How to Run Locally
-
-```bash
-# Install dependencies
-pip install requests pandas sentence-transformers gradio torch
-
-# Harvest the dataset
-python harvest\_texas\_history.py
-
-# Fix portal URLs
-python fix\_portal\_urls.py
-
-# Run the app
-python app.py
-```
-
-\---
+Built by Angela Colmenares, AI Librarian. This project sits at the intersection of information science and applied machine learning, exploring how modern embedding models can expand access to cultural heritage collections.
 
 ## Rights and Permissions
 
@@ -99,10 +53,9 @@ Users who wish to reproduce, publish, or reuse the underlying digital objects (i
 
 This project does not claim ownership of any underlying digital objects and does not reproduce them. All links point back to the original records at the Portal to Texas History.
 
-## Author
-
-**Angela Colmenares**  
-[Hugging Face](https://huggingface.co/AngelaColmen) · [LinkedIn](https://www.linkedin.com/in/angelacolmen) · [GitHub](https://github.com/AngelaColmen)
+## About
+ 
+Built by Angela Colmenares, AI Librarian. This project sits at the intersection of information science and applied machine learning, exploring how modern embedding models can expand access to cultural heritage collections.
 
 \---
 
