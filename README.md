@@ -86,6 +86,19 @@ python app.py
 
 \---
 
+## Rights and Permissions
+
+This dataset contains bibliographic metadata harvested from the Portal to Texas History (https://texashistory.unt.edu/), maintained by the University of North Texas Libraries. The metadata fields (title, description, subject headings, etc.) are factual in nature and are made available here under a CC0 1.0 license.
+
+However, **rights to the underlying digital objects vary by record and by contributing institution**. Some materials are in the public domain; others may be under copyright or have restricted use conditions. The `rights` field in each record reflects the rights statement provided by the contributing institution, where available.
+
+Users who wish to reproduce, publish, or reuse the underlying digital objects (images, documents, etc.) should:
+- Consult the `rights` field for each individual record
+- Follow the link in `portal_url` to review the full rights statement on the Portal to Texas History
+- Contact the holding institution directly if the intended use is unclear
+
+This project does not claim ownership of any underlying digital objects and does not reproduce them. All links point back to the original records at the Portal to Texas History.
+
 ## Author
 
 **Angela Colmenares**  
