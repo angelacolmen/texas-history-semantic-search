@@ -1,0 +1,8 @@
+2026-05-02 10:41:47,591 INFO: Fetching page 1, resumptionToken=None
+2026-05-02 10:41:50,010 INFO: Skipped (missing title/description): info:ark/67531/metapth2389
+2026-05-02 10:41:50,010 INFO: Skipped (missing title/description): info:ark/67531/metapth2390
+2026-05-02 10:41:50,010 INFO: Skipped (missing title/description): info:ark/67531/metapth2391
+2026-05-02 10:41:50,010 INFO: Skipped (missing title/description): info:ark/67531/metapth2392
+2026-05-02 10:41:50,011 INFO: Skipped (missing title/description): info:ark/67531/metapth2411
+2026-05-02 10:41:51,516 INFO: Harvest complete: 500 records, 5 skipped.
+2026-05-02 10:41:51,531 INFO: Saved CSV: texas_history_collection.csv
